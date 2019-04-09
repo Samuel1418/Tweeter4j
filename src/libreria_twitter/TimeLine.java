@@ -20,7 +20,7 @@ public class TimeLine {
     // The factory instance is re-useable and thread safe.
     Twitter twitter = TwitterFactory.getSingleton();
         List<Status> statuses = twitter.getHomeTimeline();
-        System.out.println("Mostrar linea del tiempo personal.");
+        System.out.println("Mostrando su línea de tiempo");
         for (Status status : statuses) {
             System.out.println(status.getUser().getName() + ":" +
                                status.getText());
