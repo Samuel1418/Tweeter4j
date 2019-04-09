@@ -18,9 +18,13 @@ public class Libreria_Twitter {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws TwitterException {
+        /*
+        *Menu donde podemos elegir que hacer
+        *Se puede ver la línea temporal, tweetear y buscar un tweet
+        */
          int opcion=0;
         do{
-            opcion=Integer.parseInt(JOptionPane.showInputDialog(null,"******TWEETER******\nQue desea hacer?\n1º Ver su TimeLine\n2ºPublicar Tweet\n3ºBusqueda manual/nPara salir pulse 0"));
+            opcion=Integer.parseInt(JOptionPane.showInputDialog(null,"******TWEETER******\nQue desea hacer?\n1º Ver su TimeLine\n2ºPublicar Tweet\n3ºBusqueda manual \n Para salir pulse 0"));
            switch(opcion){
                 case 1:TimeLine time=new TimeLine();
                        time.lineaTemporal();
@@ -29,7 +33,7 @@ public class Libreria_Twitter {
                        send.publicarTweet();
                        break;
                 case 3:Buscar search=new Buscar();
-                       search.busqueda();
+                       search.buscarTwit();
                        break;             
            } 
 }while(opcion!=0);

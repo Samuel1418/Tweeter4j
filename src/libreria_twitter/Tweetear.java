@@ -17,9 +17,9 @@ import twitter4j.TwitterFactory;
  */
 public class Tweetear {
     public void publicarTweet() throws TwitterException{
-    Twitter twitter = TwitterFactory.getSingleton();
-    String mensaje=JOptionPane.showInputDialog(null,"Tweetee");
-    Status status = twitter.updateStatus(mensaje);
-    System.out.println("Successfully updated the status to [" + status.getText() + "].");
+        /*
+        *Autorizamos al metodo a crear el tweet y metemos en la ventana lo que queramos publicar
+        */
+        Status tweetEscrito = AutorizarTweeter.autorizacion().updateStatus(JOptionPane.showInputDialog("Twit"));
 }
 }

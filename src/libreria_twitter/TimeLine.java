@@ -17,13 +17,13 @@ import twitter4j.TwitterFactory;
  */
 public class TimeLine {
     public void lineaTemporal() throws TwitterException{
-    // The factory instance is re-useable and thread safe.
-    Twitter twitter = TwitterFactory.getSingleton();
-        List<Status> statuses = twitter.getHomeTimeline();
-        System.out.println("Mostrando su línea de tiempo");
-        for (Status status : statuses) {
-            System.out.println(status.getUser().getName() + ":" +
-                               status.getText());
+    List<Status> timeLineList = AutorizarTweeter.autorizacion().getHomeTimeline();
+        System.out.println("Showing home timeline.");
+        for (int i = 0; i <=500; i++) {
+            String aux = timeLineList.get(i).getText();
+            System.out.println("-------Twit Nº"+(i+1)+"--------");
+            System.out.println(aux);
         }
-    }
+
+}
 }
